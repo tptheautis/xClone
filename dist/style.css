@@ -1,0 +1,151 @@
+html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    margin: 0;
+  }
+  
+  .mainContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    border: 1px solid #F5F8FA;;
+  }
+  
+  .column1 {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    gap: 1rem;
+    height: 100vh;
+    flex: 1;
+    border-left: 1px solid #F5F8FA;
+    border-bottom: 1px solid #F5F8FA;
+  }
+  
+  .column2 {
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    height: 100vh;
+    width: 33%;
+    border-left: 1px solid #F5F8FA;
+    border-bottom: 1px solid #F5F8FA;
+    border-right: 1px solid #F5F8FA
+  }
+  
+  .column3 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 3rem;
+    height: 100vh;
+    flex: 1;
+    border-bottom: 1px solid #F5F8FA;
+    border-right: 1px solid #F5F8FA;
+  }
+  
+  .twitterLogo, .tweet, .homeContainer, .exploreContainer, .notificationsContainer, .messagesContainer, .bookmarksContainer, .twitterBlueContainer, .profileContainer , .moreContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    margin-left: 35rem;
+    gap: 1.5rem;
+    font-size: 2.2rem;
+    border-radius: 30px;
+    padding: 1.2rem;
+    transition: all 0.3s;
+  }
+  
+  .homeContainer:hover, .exploreContainer:hover, .notificationsContainer:hover, .messagesContainer:hover, .bookmarksContainer:hover, .twitterBlueContainer:hover, .profileContainer:hover ,.moreContainer:hover, .showMoreContainer:hover {
+    background-color: #e1e8ed;
+  }
+  
+  .tweet {
+    display: flex;
+    justify-content: center;
+    font: arial;
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: #1DA1F2;
+    border-radius: 30px;
+    width: 21rem;
+    height: 1.8rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+  
+  .tweet:hover {
+    filter: brightness(90%);
+  }
+  
+  .row1, .row2 {
+    display: flex;
+    width: 100%;
+    height: 10rem;
+    border-bottom: 1px solid #F5F8FA;
+  }
+  
+  /*Middle*/
+  
+  .searchBar {
+    display: flex;
+    align-items: center;
+    color: #657786;
+    gap: 2rem;
+    font-size: 1.7rem;
+    padding-left: 2rem;
+    background-color: #F5F8FA;
+    border-radius: 20px;
+    width: 33rem;
+    height: 4.5rem;
+  }
+  
+  .happeningContainer {
+    display: flex;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: #F5F8FA;
+    padding: 2rem;
+    border-radius: 20px;
+    width: 31rem;
+    height: 50rem;
+  }
+  
+  .whoToFollowContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5F8FA;
+    font-size: 2rem;
+    font-weight: 600;
+    border-radius: 20px;
+    width: 35rem;
+    height: fit-content;
+  }
+  
+  .odinContainer, .stackContainer, .githubContainer, .showMoreContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    padding: 2rem;
+    font-size: 1.5rem;
+    transition: all 0.3s;
+  }
+  
+  .showMoreContainer {
+    display: flex;
+    flex: 2;
+    padding: 2rem;
+    color: skyblue;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition: all 0.3s;
+  }
+  
+  .odinContainer:hover, .stackContainer:hover, .githubContainer:hover, .showMoreContainer:hover {
+    background-color: #e1e8ed;
+  }

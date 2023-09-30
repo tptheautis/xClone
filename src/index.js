@@ -1,8 +1,7 @@
 import createHomePage from './home';
-import createProfilePage from './profilePage';
+import signIn from './signIn';
 
-// Project Global Variables
-
+// Base layout
 const content = document.getElementById('content');
 const mainContainer = document.createElement('div');
 const column1 = document.createElement('div');
@@ -32,4 +31,6 @@ column3.append(searchBar);
 column3.append(happeningContainer);
 column3.append(whoToFollowContainer);
 
+// Project Global Variables
+signIn();
 createHomePage();

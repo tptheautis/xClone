@@ -31,7 +31,13 @@ column3.append(searchBar);
 column3.append(happeningContainer);
 column3.append(whoToFollowContainer);
 
-export { column1 };
+export {
+  column1, column2, column3, row1, row2,
+};
+
+export {
+  searchBar, happeningContainer, whoToFollowContainer,
+};
 
 // Project Global Variables
 signIn();

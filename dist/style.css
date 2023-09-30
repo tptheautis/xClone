@@ -149,3 +149,23 @@ html {
   .odinContainer:hover, .stackContainer:hover, .githubContainer:hover, .showMoreContainer:hover {
     background-color: #e1e8ed;
   }
+
+  .homeLogo, .exploreLogo, .notificationsLogo, .messagesLogo, .bookmarksLogo, .twitterBlueLogo, .profileLogo, .moreLogo, .tweetLogo {
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.searchIcon {
+    width: 1.7rem;
+    height: 1.7rem;
+}
+
+.odinIcon, .stackIcon, .githubIcon {
+    width: 5rem;
+    height: 5rem;
+}
+
+.twitterLogo {
+    width: 4rem;
+    height: 4rem;
+}

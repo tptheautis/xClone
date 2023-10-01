@@ -1,4 +1,5 @@
 html {
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 62.5%;
   }
   
@@ -27,7 +28,6 @@ html {
   
   .column2 {
     display: flex;
-    padding: 2rem;
     flex-direction: column;
     height: 100vh;
     width: 33%;
@@ -47,6 +47,11 @@ html {
     border-right: 1px solid #F5F8FA;
   }
   
+  .homeHeading {
+    display: flex;
+    padding-left: 2rem;
+  }
+  
   .twitterLogo, .tweet, .homeContainer, .exploreContainer, .notificationsContainer, .messagesContainer, .bookmarksContainer, .twitterBlueContainer, .profileContainer , .moreContainer {
     display: flex;
     flex-direction: row;
@@ -57,7 +62,7 @@ html {
     font-size: 2.2rem;
     border-radius: 30px;
     padding: 1.2rem;
-    transition: all 0.3s;
+    transition: all 0.2s;
   }
   
   .homeContainer:hover, .exploreContainer:hover, .notificationsContainer:hover, .messagesContainer:hover, .bookmarksContainer:hover, .twitterBlueContainer:hover, .profileContainer:hover ,.moreContainer:hover, .showMoreContainer:hover {
@@ -79,7 +84,7 @@ html {
     padding-bottom: 1.5rem;
   }
   
-  .tweet:hover {
+  .tweet:hover, .tweetPopUpContainerTweetButton:hover {
     filter: brightness(90%);
   }
   
@@ -90,7 +95,215 @@ html {
     border-bottom: 1px solid #F5F8FA;
   }
   
+  .tweetPopUpContainer {
+    display: grid;
+    position: fixed;
+    grid-template-columns: [line1] 5rem [line2] 1fr [line3];
+    grid-template-rows: [line1] 5rem [line2] 1fr [line3] 5rem [line4];
+    padding: 1.6rem;
+    top: 23%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60rem;
+    height: 30rem;
+    background-color: white;
+    border-radius: 30px;
+  }
+  
+  .tweetPopUpContainerHeader {
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+  
+  .tweetPopUpContainerFooter {
+    display: grid;
+    display: flex;
+    flex-direction: row;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3.2rem 1.6rem;
+    border-top: #e1e8ed 1px solid;
+  }
+  
+  .tweetPopUpContainerSidebar {
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  
+  .tweetPopUpContainerContent {
+    display: grid;
+    font-size: 2rem;
+    font-weight: 400;
+    font-stretch: 100%;
+    line-height: 2.4rem;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  
+  #tweetSomething {
+    display: block;
+    width: 55rem;
+    height: 100%;
+    font: 2rem;
+  }
+  
+  [contenteditable] {
+    outline: 0px solid transparent;
+  }
+  
+  textarea {
+    display: flex;
+    width: 100%;
+    min-height: 20rem;
+  }
+  
+  .tweetPopUpContainerTweetButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #1DA1F2;
+    font-size: 1.5rem;
+    font-weight: 900;
+    width: 10rem;
+    height: 3.6rem;
+    border-radius: 30px;
+    transition: all 0.2s;
+  }
+  
   /*Middle*/
+  .row1 {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .row1OptionsContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    font-size: 1.6rem;
+    font-weight: 200;
+    height: 100%;
+  }
+  
+  .forYouContainer, .followingContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    transition: all 0.2s;
+  }
+  
+  .forYouContainer:hover, .followingContainer:hover {
+    background-color: #e1e8ed;
+  }
+  
+  .forYouTextContainer, .followingTextContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  
+  .blueUnderline1, .blueUnderline2 {
+    display: flex;
+    position: relative;
+    top: 1.3rem;
+    background-color: #1DA1F2;
+    width: 100%;
+    height: 4px;
+    border-radius: 5px;
+  }
+  
+  .myTweetContainer {
+    display: flex;
+    display: grid;
+    font-size: 1.5rem;
+    grid-template-columns: [line1] 5rem [line2] 1fr [line3];
+    grid-template-rows: [line1] 2rem [line2] 1fr [line3] 3rem [line4];
+    color: black;
+    width: 100%;
+    min-height: 10rem;
+    border: 1px #F5F8FA solid;
+  }
+  
+  .myTweetContainerHeader {
+    display: flex;
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 1;
+  }
+  
+  .myTweetContainerFooter {
+    display: flex;
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+  
+  .myTweetContainerSidebar {
+    display: flex;
+    display: grid;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 3;
+  }
+  
+  .myTweetContainerContent {
+    display: flex;
+    display: grid;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+  
+  .mediaIconContainer {
+    display: flex;
+    width: 15rem;
+    height: 1rem;
+  }
+  
+  #tweetImageInput {
+    width: 5px;
+    height: 100%;
+    border: 1px solid red;
+  }
+  
+  #displayImage {
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    border: solid 1px red;
+  }
+  
+  textarea {
+    border: none;
+    outline: none;
+    resize: none;
+  }
+  
+  /*Right*/
   
   .searchBar {
     display: flex;
@@ -127,27 +340,176 @@ html {
     height: fit-content;
   }
   
+  .whoToFollowTextContainer {
+    display: flex;
+    padding: 1.4rem;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  
   .odinContainer, .stackContainer, .githubContainer, .showMoreContainer {
     display: flex;
+    align-items: center;
     flex: 1;
+    gap: 1rem;
     flex-direction: row;
-    padding: 2rem;
+    padding: 1.4rem;
     font-size: 1.5rem;
-    transition: all 0.3s;
+    transition: all 0.2s;
+  }
+  
+  .odinTextContainer, .stackTextContainer, .githubTextContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .odinNameContainer, .stackNameContainer, .githubNameContainer {
+    font-weight: 600;
+  }
+  
+  .odinUsernameContainer, .stackUsernameContainer, .githubUsernameContainer {
+    font-weight: 100;
   }
   
   .showMoreContainer {
     display: flex;
     flex: 2;
     padding: 2rem;
-    color: skyblue;
+    color: #1DA1F2;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
-    transition: all 0.3s;
+    transition: all 0.2s;
   }
   
   .odinContainer:hover, .stackContainer:hover, .githubContainer:hover, .showMoreContainer:hover {
     background-color: #e1e8ed;
+  }
+  
+  /*Buttons*/
+  
+  .followButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 3.2rem;
+    font-size: 1.4rem;
+    padding: 0rem 1.6rem;
+    margin-left: auto;
+    width: 5rem;
+    color: white;
+    background-color: rgb(15, 20, 35);
+    border-radius: 30px;
+  }
+  
+  .followingButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 3.2rem;
+    font-size: 1.4rem;
+    padding: 0rem 2rem;
+    margin-left: auto;
+    width: 5rem;
+    color: rgb(15, 20, 35);
+    background-color: #F5F8FA;
+    border: 1px solid #cfd9de;
+    border-radius: 30px;
+  }
+  
+  .unfollowButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 3.2rem;
+    font-size: 1.4rem;
+    padding: 0rem 1.6rem;
+    margin-left: auto;
+    width: 5rem;
+    color: rgb(244, 33, 46);
+    background-color: rgba(244, 33, 46, 0.1);
+    border: 1px solid #FDC9CE;
+    border-radius: 30px;
+  }
+  
+  /*Pop-Up*/
+  
+  .unfollowPopUpContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25.6rem;
+    height: 25.6rem;
+    background: white;
+    position: absolute;
+    padding: 3.2rem;
+    border-radius: 30px;
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .popUpUnfollowTitleContainer, .popUpUnfollowUsernameContainer {
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .popUpParaContainer {
+    display: flex;
+    width: 100%;
+    font-size: 1.5rem;
+    color: #536471;
+    margin-bottom: 1rem;
+  }
+  
+  #stackPopUpPara, #githubPopUpPara {
+    color: #536471;
+    font-size: 1.5rem;
+  }
+  
+  .popUpUnfollowButton {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    height: 4.2rem;
+    width: 100%;
+    color: white;
+    background-color: rgb(15, 20, 25);
+    border-radius: 30px;
+  }
+  
+  .popUpCancelButton {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    height: 4.2rem;
+    width: 100%;
+    color: black;
+    background-color: white;
+    border: 1px solid #cfd9de;
+    border-radius: 30px;
+    margin-top: 1rem;
   }
 
   .homeLogo, .exploreLogo, .notificationsLogo, .messagesLogo, .bookmarksLogo, .twitterBlueLogo, .profileLogo, .moreLogo, .tweetLogo {
@@ -168,4 +530,14 @@ html {
 .twitterLogo {
     width: 4rem;
     height: 4rem;
+}
+
+.tweetX {
+    width: 2rem;
+    height: 2rem;
+}
+
+.mediaIcon {
+    width: 2rem;
+    height: 2rem;
 }

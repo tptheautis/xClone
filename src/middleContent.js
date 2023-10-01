@@ -2,6 +2,7 @@ import { row1 } from './index'
 
 function createMiddleContent() {
   const searchTwitter = document.createElement('div');
+
   const searchTwitterText = document.createTextNode('Search Twitter');
   const homeHeadingContainer = document.createElement('h1');
   const forYou = document.createElement('div');
@@ -56,5 +57,6 @@ function createMiddleContent() {
     });
   });
 }
+
 
 export default createMiddleContent;

@@ -40,5 +40,4 @@ export {
 };
 
 // Project Global Variables
-signIn();
 createHomePage();

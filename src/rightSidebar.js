@@ -16,14 +16,14 @@ function createRightSidebar() {
   const whoToFollowText = document.createTextNode('Who to follow');
   whoToFollowContainer.append(whoToFollowTextContainer);
   whoToFollowTextContainer.append(whoToFollowText);
-  
+
   // SearchBar
   const searchIcon = document.createElement('img');
   searchIcon.classList.add('searchIcon');
   searchIcon.src = '../src/assets/searchIcon.png';
   searchBar.append(searchIcon);
   searchBar.append(searchTwitterText);
-  
+
   // Stack Overflow Profile
   const stackContainer = document.createElement('div');
   stackContainer.classList.add('stackContainer');
@@ -36,18 +36,6 @@ function createRightSidebar() {
   stackContainer.append(stackIcon);
   stackContainer.append(stackName);
   stackContainer.append(stackUsername);
-  // Github Profile
-  const githubContainer = document.createElement('div');
-  githubContainer.classList.add('githubContainer');
-  const githubIcon = document.createElement('img');
-  githubIcon.classList.add('githubIcon');
-  githubIcon.src = '../src/assets/gitIcon.png';
-  const githubName = document.createTextNode('GitHub');
-  const githubUsername = document.createTextNode('@github');
-  whoToFollowContainer.append(githubContainer);
-  githubContainer.append(githubIcon);
-  githubContainer.append(githubName);
-  githubContainer.append(githubUsername);
   // Show More
   const showMoreContainer = document.createElement('div');
   showMoreContainer.classList.add('showMoreContainer');

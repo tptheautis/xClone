@@ -64,7 +64,7 @@ function odinProfile() {
   odinPopUpUsernameContainer.classList.add('popUpUnfollowUsernameContainer');
   const odinPopUpUnfollowTitleContainer = document.createElement('div');
   odinPopUpUnfollowTitleContainer.classList.add('popUpUnfollowTitleContainer');
-  const popUpPara = document.getElementById('odinPopUpPara');
+  const odinPopUpPara = document.getElementById('odinPopUpPara');
   const popUpParaContainer = document.createElement('div');
   popUpParaContainer.classList.add('popUpParaContainer');
   const popUpUnfollowButton = document.createElement('div');
@@ -78,7 +78,7 @@ function odinProfile() {
   odinPopUpUnfollowTitleContainer.append(popUpUnfollowTitle);
   odinPopUpUsernameContainer.append(odinPopUpUsername);
   unfollowPopUpContainer.append(popUpParaContainer);
-  popUpParaContainer.append(popUpPara);
+  popUpParaContainer.append(odinPopUpPara);
   unfollowPopUpContainer.append(popUpUnfollowButton);
   unfollowPopUpContainer.append(popUpCancelButton);
   popUpUnfollowButton.append(popUpUnfollowButtonText);

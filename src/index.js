@@ -30,6 +30,8 @@ column3.append(searchBar);
 column3.append(happeningContainer);
 column3.append(whoToFollowContainer);
 
+// Pop-up Text
+
 export {
   mainContainer, column1, column2, column3, row1, row2,
 };

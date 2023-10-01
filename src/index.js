@@ -1,5 +1,4 @@
 import createHomePage from './home';
-import signIn from './signIn';
 
 // Base layout
 const content = document.getElementById('content');
@@ -32,7 +31,7 @@ column3.append(happeningContainer);
 column3.append(whoToFollowContainer);
 
 export {
-  column1, column2, column3, row1, row2,
+  mainContainer, column1, column2, column3, row1, row2,
 };
 
 export {

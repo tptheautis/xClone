@@ -22,6 +22,13 @@ function stackProfile() {
   stackTextContainer.append(stackUsernameContainer);
   stackNameContainer.append(stackName);
   stackUsernameContainer.append(stackUsername);
+
+  // Show More
+  const showMoreContainer = document.createElement('div');
+  showMoreContainer.classList.add('showMoreContainer');
+  const showMoreText = document.createTextNode('Show more');
+  whoToFollowContainer.append(showMoreContainer);
+  showMoreContainer.append(showMoreText);
 }
 
 export default stackProfile;

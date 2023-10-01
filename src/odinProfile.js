@@ -1,3 +1,4 @@
+import { mainContainer } from './index';
 import { whoToFollowContainer } from './rightSidebar';
 
 function odinProfile() {
@@ -22,6 +23,81 @@ function odinProfile() {
   odinTextContainer.append(odinUsernameContainer);
   odinNameContainer.append(odinName);
   odinUsernameContainer.append(odinUsername);
+
+  // Odin Buttons
+  const odinFollowButton = document.createElement('div');
+  odinFollowButton.classList.add('followButton');
+  const odinFollowButtonText = document.createTextNode('Follow');
+  odinFollowButton.append(odinFollowButtonText);
+  const odinFollowingButton = document.createElement('div');
+  odinFollowingButton.classList.add('followingButton');
+  const odinFollowingButtonText = document.createTextNode('Following');
+  odinFollowingButton.append(odinFollowingButtonText);
+  const odinUnfollowButton = document.createElement('div');
+  odinUnfollowButton.classList.add('unfollowButton');
+  const odinUnfollowButtonText = document.createTextNode('Unfollow');
+  odinUnfollowButton.append(odinUnfollowButtonText);
+
+  // Odin Button Functions
+  odinContainer.append(odinFollowButton);
+  odinFollowButton.addEventListener('click', () => {
+    odinContainer.removeChild(odinFollowButton);
+    odinContainer.append(odinFollowingButton);
+  });
+  odinFollowingButton.addEventListener('mouseenter', () => {
+    odinContainer.removeChild(odinFollowingButton);
+    odinContainer.append(odinUnfollowButton);
+  });
+  odinUnfollowButton.addEventListener('mouseout', () => {
+    odinContainer.removeChild(odinUnfollowButton);
+    odinContainer.append(odinFollowingButton);
+  });
+
+  // Odin pop-up
+  const unfollowPopUpContainer = document.createElement('div');
+  unfollowPopUpContainer.classList.add('unfollowPopUpContainer');
+  const overlay = document.createElement('div');
+  overlay.classList.add('overlay');
+  const popUpUnfollowTitle = document.createTextNode('Unfollow');
+  const odinPopUpUsername = document.createTextNode('@TheOdinProject?');
+  const odinPopUpUsernameContainer = document.createElement('div');
+  odinPopUpUsernameContainer.classList.add('popUpUnfollowUsernameContainer');
+  const odinPopUpUnfollowTitleContainer = document.createElement('div');
+  odinPopUpUnfollowTitleContainer.classList.add('popUpUnfollowTitleContainer');
+  const popUpPara = document.getElementById('odinPopUpPara');
+  const popUpParaContainer = document.createElement('div');
+  popUpParaContainer.classList.add('popUpParaContainer');
+  const popUpUnfollowButton = document.createElement('div');
+  popUpUnfollowButton.classList.add('popUpUnfollowButton');
+  const popUpUnfollowButtonText = document.createTextNode('Unfollow');
+  const popUpCancelButton = document.createElement('div');
+  popUpCancelButton.classList.add('popUpCancelButton');
+  const popUpCancelButtonText = document.createTextNode('Cancel');
+  unfollowPopUpContainer.append(odinPopUpUnfollowTitleContainer);
+  unfollowPopUpContainer.append(odinPopUpUsernameContainer);
+  odinPopUpUnfollowTitleContainer.append(popUpUnfollowTitle);
+  odinPopUpUsernameContainer.append(odinPopUpUsername);
+  unfollowPopUpContainer.append(popUpParaContainer);
+  popUpParaContainer.append(popUpPara);
+  unfollowPopUpContainer.append(popUpUnfollowButton);
+  unfollowPopUpContainer.append(popUpCancelButton);
+  popUpUnfollowButton.append(popUpUnfollowButtonText);
+  popUpCancelButton.append(popUpCancelButtonText);
+
+  odinUnfollowButton.addEventListener('click', () => {
+    mainContainer.append(overlay);
+    mainContainer.append(unfollowPopUpContainer);
+  });
+  popUpUnfollowButton.addEventListener('click', () => {
+    mainContainer.removeChild(overlay);
+    mainContainer.removeChild(unfollowPopUpContainer);
+    odinContainer.removeChild(odinFollowingButton);
+    odinContainer.append(odinFollowButton);
+  });
+  popUpCancelButton.addEventListener('click', () => {
+    mainContainer.removeChild(overlay);
+    mainContainer.removeChild(unfollowPopUpContainer);
+  });
 }
 
 export default odinProfile;

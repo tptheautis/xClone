@@ -23,13 +23,6 @@ function createRightSidebar() {
   searchIcon.src = '../src/assets/searchIcon.png';
   searchBar.append(searchIcon);
   searchBar.append(searchTwitterText);
-
-  // Show More
-  const showMoreContainer = document.createElement('div');
-  showMoreContainer.classList.add('showMoreContainer');
-  const showMoreText = document.createTextNode('Show more');
-  whoToFollowContainer.append(showMoreContainer);
-  showMoreContainer.append(showMoreText);
 }
 
 export {

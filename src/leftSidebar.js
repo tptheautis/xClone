@@ -1,6 +1,7 @@
 import createProfile from './profile';
 import createMiddleContent from './middleContent';
 import { column1, column2, row1, row2 } from './index.js';
+import { bannerContainer, profileInfoContainer, profileContentContainer } from './profile';
 
 function createLeftSidebar() {
   // Left Sidebar Elements
@@ -116,6 +117,12 @@ function createLeftSidebar() {
   // Profile Button Dynamics
   profileContainer.addEventListener('click', () => {
     createProfile();
+  });
+
+  homeContainer.addEventListener('click', () => {
+    column2.removeChild(bannerContainer);
+    column2.removeChild(profileInfoContainer);
+    column2.removeChild(profileContentContainer);
   });
 }
 

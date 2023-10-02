@@ -1,4 +1,6 @@
-import { column1 } from './index.js';
+import createProfile from './profile';
+import createMiddleContent from './middleContent';
+import { column1, column2, row1, row2 } from './index.js';
 
 function createLeftSidebar() {
   // Left Sidebar Elements
@@ -104,6 +106,17 @@ function createLeftSidebar() {
   moreContainer.append(moreLogo, moreText);
   column1.append(tweet);
   tweet.append(tweetText);
+
+  // Home Button Dynamics
+  homeContainer.addEventListener('click', () => {
+    column2.append(row1);
+    column2.append(row2);
+  });
+
+  // Profile Button Dynamics
+  profileContainer.addEventListener('click', () => {
+    createProfile();
+  });
 }
 
 export default createLeftSidebar;

@@ -27,3 +27,16 @@ html {
     width: 100%;
     border: 1px solid red;
 }
+
+.editProfileButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1.5px solid #E1E8ED;
+    height: 3.6rem;
+    width: 11rem;
+    border-radius: 20px;
+    color: #0F1419;
+    font-size: 1.5rem;
+    font-weight: 600;
+}

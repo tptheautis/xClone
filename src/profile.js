@@ -6,6 +6,11 @@ const profileContentContainer = document.createElement('div');
 bannerContainer.classList.add('bannerContainer');
 profileInfoContainer.classList.add('profileInfoContainer');
 profileContentContainer.classList.add('profileContentContainer');
+const profileInfo = document.createElement('div');
+profileInfo.classList.add('profileInfo');
+const editProfileButton = document.createElement('div');
+editProfileButton.classList.add('editProfileButton');
+const editProfileButtonText = document.createTextNode('Edit Profile');
 
 function createProfile() {
   column2.removeChild(row1);
@@ -13,6 +18,9 @@ function createProfile() {
   column2.append(bannerContainer);
   column2.append(profileInfoContainer);
   column2.append(profileContentContainer);
+  profileInfoContainer.append(profileInfo);
+  profileInfoContainer.append(editProfileButton);
+  editProfileButton.append(editProfileButtonText);
 }
 
 export {

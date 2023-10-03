@@ -8,9 +8,29 @@ profileInfoContainer.classList.add('profileInfoContainer');
 profileContentContainer.classList.add('profileContentContainer');
 const profileInfo = document.createElement('div');
 profileInfo.classList.add('profileInfo');
-const editProfileButton = document.createElement('div');
-editProfileButton.classList.add('editProfileButton');
+const profileNameContainer = document.createElement('div');
+profileNameContainer.classList.add('profileUsername');
+const profileNameText = document.createTextNode('NewUser');
+const profileUsernameContainer = document.createElement('div');
+profileUsernameContainer.classList.add('profileUsername');
+const profileUsernameText = document.createTextNode('@NewUser');
+const profileFollowingContainer = document.createElement('div');
+profileFollowingContainer.classList.add('profileFollowing');
+const profileFollowingText = document.createTextNode('Following');
+const profileFollowersContainer = document.createElement('div');
+profileFollowersContainer.classList.add('profileFollowers');
+const profileFollowersText = document.createTextNode('Followers');
+const editProfileButtonContainer = document.createElement('div');
+editProfileButtonContainer.classList.add('editProfileButton');
 const editProfileButtonText = document.createTextNode('Edit Profile');
+const profileOptionsContainer = document.createElement('div');
+profileOptionsContainer.classList.add('profileOptionsContainer');
+const profilePostsContainer = document.createElement('div');
+profilePostsContainer.classList.add('profilePostsContainer');
+const profilePostsContainerText = document.createTextNode('Posts');
+const profileLikesContainer = document.createElement('div');
+profileLikesContainer.classList.add('profileLikesContainer');
+const profileLikesContainerText = document.createTextNode('Likes');
 
 function createProfile() {
   column2.removeChild(row1);
@@ -18,9 +38,21 @@ function createProfile() {
   column2.append(bannerContainer);
   column2.append(profileInfoContainer);
   column2.append(profileContentContainer);
+  profileInfoContainer.append(editProfileButtonContainer);
+  editProfileButtonContainer.append(editProfileButtonText);
   profileInfoContainer.append(profileInfo);
-  profileInfoContainer.append(editProfileButton);
-  editProfileButton.append(editProfileButtonText);
+  profileInfo.append(profileNameContainer);
+  profileNameContainer.append(profileNameText);
+  profileInfo.append(profileUsernameContainer);
+  profileUsernameContainer.append(profileUsernameText);
+  profileInfo.append(profileFollowingContainer);
+  profileFollowingContainer.append(profileFollowingText);
+  profileInfo.append(profileFollowersContainer);
+  profileFollowersContainer.append(profileFollowersText);
+  profileInfoContainer.append(profilePostsContainer);
+  profilePostsContainer.append(profilePostsContainerText);
+  profileInfoContainer.append(profileLikesContainer);
+  profileLikesContainer.append(profileLikesContainerText);
 }
 
 export {

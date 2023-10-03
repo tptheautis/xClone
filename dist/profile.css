@@ -16,6 +16,7 @@ html {
 
 .profileInfoContainer {
     display: flex;
+    flex-direction: column;
     height: 23rem;
     width: 100%;
     border: 1px solid red;

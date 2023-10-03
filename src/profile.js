@@ -28,6 +28,15 @@ profileOptionsContainer.classList.add('profileOptionsContainer');
 const profilePostsContainer = document.createElement('div');
 profilePostsContainer.classList.add('profilePostsContainer');
 const profilePostsContainerText = document.createTextNode('Posts');
+const profileRepliesContainer = document.createElement('div');
+profileRepliesContainer.classList.add('profileLikesContainer');
+const profileRepliesContainerText = document.createTextNode('Replies');
+const profileHighlightsContainer = document.createElement('div');
+profileHighlightsContainer.classList.add('profileHighlightsContainer');
+const profileHighlightsContainerText = document.createTextNode('Highlights');
+const profileMediaContainer = document.createElement('div');
+profileMediaContainer.classList.add('profileMediaContainer');
+const profileMediaContainerText = document.createTextNode('Media');
 const profileLikesContainer = document.createElement('div');
 profileLikesContainer.classList.add('profileLikesContainer');
 const profileLikesContainerText = document.createTextNode('Likes');
@@ -49,9 +58,16 @@ function createProfile() {
   profileFollowingContainer.append(profileFollowingText);
   profileInfo.append(profileFollowersContainer);
   profileFollowersContainer.append(profileFollowersText);
-  profileInfoContainer.append(profilePostsContainer);
+  profileInfoContainer.append(profileOptionsContainer);
+  profileOptionsContainer.append(profilePostsContainer);
   profilePostsContainer.append(profilePostsContainerText);
-  profileInfoContainer.append(profileLikesContainer);
+  profileOptionsContainer.append(profileRepliesContainer);
+  profileRepliesContainer.append(profileRepliesContainerText);
+  profileOptionsContainer.append(profileHighlightsContainer);
+  profileHighlightsContainer.append(profileHighlightsContainerText);
+  profileOptionsContainer.append(profileMediaContainer);
+  profileMediaContainer.append(profileMediaContainerText);
+  profileOptionsContainer.append(profileLikesContainer);
   profileLikesContainer.append(profileLikesContainerText);
 }
 

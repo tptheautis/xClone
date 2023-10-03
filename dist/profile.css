@@ -17,6 +17,7 @@ html {
 .profileInfoContainer {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     height: 23rem;
     width: 100%;
     border: 1px solid red;
@@ -40,4 +41,14 @@ html {
     color: #0F1419;
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+.profileOptionsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #536471;
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem;
 }

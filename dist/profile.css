@@ -11,23 +11,71 @@ html {
     display: flex;
     height: 20rem;
     width: 100%;
-    border: 1px solid red;
+    border-left: 1px solid #F5F8FA;
+    border-top: 1px solid #F5F8FA;
+    border-right: 1px solid #F5F8FA;
 }
 
 .profileInfoContainer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 23rem;
+    min-height: 23rem;
     width: 100%;
-    border: 1px solid red;
+    border-left: 1px solid #F5F8FA;
+    border-top: 1px solid #F5F8FA;
+    border-right: 1px solid #F5F8FA;
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 1.6rem;
+}
+
+.profileNameContainer {
+    display: flex;
+    font-size: 2rem; 
+    font-weight: 800;
+}
+
+.profileUsernameContainer {
+    display: flex;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #536471;
+}
+
+
+.profileFollowingFollowersContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    width: 20rem;
+    color: #536471;
+    padding-top: 3rem;
+}
+
+.profileFollowingContainer, .profileFollowerContainer {
+    display: flex;
+    font: 200;
 }
 
 .profileContentContainer {
     display: flex;
     height: fit-content;
     width: 100%;
-    border: 1px solid red;
+    border-left: 1px solid #F5F8FA;
+    border-bottom: 1px solid #F5F8FA;
+    border-right: 1px solid #F5F8FA;
+}
+
+.editProfileButtonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 1.6rem;
 }
 
 .editProfileButton {

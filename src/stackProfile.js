@@ -99,7 +99,6 @@ function stackProfile() {
     mainContainer.removeChild(stackUnfollowPopUpContainer);
   });
 
-
   // Show More
   const showMoreContainer = document.createElement('div');
   showMoreContainer.classList.add('showMoreContainer');

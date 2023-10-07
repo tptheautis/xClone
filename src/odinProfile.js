@@ -1,4 +1,4 @@
-import { mainContainer } from './index';
+import { mainContainer, followingCount } from './index';
 import { whoToFollowContainer } from './rightSidebar';
 
 function odinProfile() {

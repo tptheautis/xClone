@@ -1,31 +1,30 @@
 import createProfile from './profile';
 import createMiddleContent from './middleContent';
-import { column1, column2, row1, row2 } from './index.js';
+import { mainContainer, column1, column2, row1, row2 } from './index.js';
 import { bannerContainer, profileInfoContainer, profileContentContainer } from './profile';
 
+// Left Sidebar Elements
+const home = document.createElement('div');
+const explore = document.createElement('div');
+const notifications = document.createElement('div');
+const messages = document.createElement('div');
+const bookmarks = document.createElement('div');
+const twitterBlue = document.createElement('div');
+const profile = document.createElement('div');
+const more = document.createElement('div');
+const tweet = document.createElement('div');
+
+// Left Sidebar Containers
+const homeContainer = document.createElement('div')
+const exploreContainer = document.createElement('div');
+const notificationsContainer = document.createElement('div');
+const messagesContainer = document.createElement('div');
+const bookmarksContainer = document.createElement('div');
+const twitterBlueContainer = document.createElement('div');
+const profileContainer = document.createElement('div');
+const moreContainer = document.createElement('div');
+const tweetContainer = document.createElement('div');
 function createLeftSidebar() {
-  // Left Sidebar Elements
-  const home = document.createElement('div');
-  const explore = document.createElement('div');
-  const notifications = document.createElement('div');
-  const messages = document.createElement('div');
-  const bookmarks = document.createElement('div');
-  const twitterBlue = document.createElement('div');
-  const profile = document.createElement('div');
-  const more = document.createElement('div');
-  const tweet = document.createElement('div');
-
-  // Left Sidebar Containers
-  const homeContainer = document.createElement('div')
-  const exploreContainer = document.createElement('div');
-  const notificationsContainer = document.createElement('div');
-  const messagesContainer = document.createElement('div');
-  const bookmarksContainer = document.createElement('div');
-  const twitterBlueContainer = document.createElement('div');
-  const profileContainer = document.createElement('div');
-  const moreContainer = document.createElement('div');
-  const tweetContainer = document.createElement('div');
-
   // Left Sidebar Images
   const twitterLogo = document.createElement('img');
   twitterLogo.classList.add('twitterLogo');
@@ -125,5 +124,74 @@ function createLeftSidebar() {
     column2.removeChild(profileContentContainer);
   });
 }
+
+const tweetPopUpContainer = document.createElement('div');
+tweetPopUpContainer.classList.add('tweetPopUpContainer');
+const tweetPopUpContainerHeader = document.createElement('div');
+tweetPopUpContainerHeader.classList.add('tweetPopUpContainerHeader');
+const tweetPopUpContainerFooter = document.createElement('div');
+tweetPopUpContainerFooter.classList.add('tweetPopUpContainerFooter');
+const tweetPopUpContainerSidebar = document.createElement('div');
+tweetPopUpContainerSidebar.classList.add('tweetPopUpContainerSidebar');
+const tweetPopUpContainerContent = document.createElement('tweetPopUpContainerContent');
+tweetPopUpContainerContent.classList.add('tweetPopUpContainerContent');
+const myTweetText = document.getElementById('myTweetText');
+const tweetPopUpContainerTweetButton = document.createElement('div');
+tweetPopUpContainerTweetButton.classList.add('tweetPopUpContainerTweetButton');
+const tweetPopUpContainerTweetButtonText = document.createTextNode('Tweet');
+const tweetPopUpOverlay = document.createElement('div');
+tweetPopUpOverlay.classList.add('overlay');
+const tweetX = document.createElement('img');
+tweetX.classList.add('tweetX');
+tweetX.src = '../src/assets/x.png';
+const mediaIcon = document.createElement('img');
+mediaIcon.classList.add('mediaIcon');
+mediaIcon.src = '../src/assets/mediaIcon.png';
+const mediaIconContainer = document.createElement('div');
+mediaIconContainer.classList.add('mediaIconContainer');
+
+tweetPopUpContainer.append(tweetPopUpContainerHeader);
+tweetPopUpContainer.append(tweetPopUpContainerFooter);
+tweetPopUpContainer.append(tweetPopUpContainerSidebar);
+tweetPopUpContainer.append(tweetPopUpContainerContent);
+tweetPopUpContainerContent.append(myTweetText);
+tweetPopUpContainerSidebar.append(tweetX);
+tweetPopUpContainerFooter.append(mediaIconContainer);
+mediaIconContainer.append(mediaIcon);
+
+tweetPopUpContainerFooter.append(tweetPopUpContainerTweetButton);
+tweetPopUpContainerTweetButton.append(tweetPopUpContainerTweetButtonText);
+
+const myTweetContainer = document.createElement('div');
+myTweetContainer.classList.add('myTweetContainer');
+const myTweetContainerHeader = document.createElement('div');
+myTweetContainerHeader.classList.add('myTweetContainerHeader');
+const myTweetContainerFooter = document.createElement('div');
+myTweetContainerFooter.classList.add('myTweetContainerFooter');
+const myTweetContainerContent = document.createElement('div');
+myTweetContainerContent.classList.add('myTweetContainerContent');
+const myTweetContainerSidebar = document.createElement('div');
+myTweetContainerSidebar.classList.add('myTweetContainerSidebar');
+myTweetContainer.append(myTweetContainerHeader);
+myTweetContainer.append(myTweetContainerFooter);
+myTweetContainer.append(myTweetContainerContent);
+myTweetContainer.append(myTweetContainerSidebar);
+
+// My Tweet Pop-Up
+tweet.addEventListener('click', () => {
+  mainContainer.append(tweetPopUpOverlay);
+  mainContainer.append(tweetPopUpContainer);
+});
+tweetX.addEventListener('click', () => {
+  mainContainer.removeChild(tweetPopUpOverlay);
+  mainContainer.removeChild(tweetPopUpContainer);
+});
+tweetPopUpContainerTweetButton.addEventListener('click', () => {
+  mainContainer.removeChild(tweetPopUpContainer);
+  mainContainer.removeChild(tweetPopUpOverlay);
+  column2.append(myTweetContainer);
+  myTweetContainerContent.append(myTweetText.value);
+  console.log(myTweetText.value);
+});
 
 export default createLeftSidebar;

@@ -550,10 +550,26 @@ html {
 
 /*Search Box --------------------------------------------------------------------------------------------------------------------------------------------*/
 
-.searchBox {
-  width: 600px;
-  background: #fff;
-  margin: 200px auto 0;
+#searchInputBox {
+  font-size: 1.6rem;
+}
+
+.searchBarContainer {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 33rem;
+  height: 1.8rem;
+  background: #F5F8FA;
+  border-radius: 30px;
+  padding: 12px;
+  color: #AAB8C2;
+}
+
+.searchInputContainer {
+  display: flex;
+  width: 30rem;
+  background-color: #F5F8FA;
   border-radius: 5px;
 }
 

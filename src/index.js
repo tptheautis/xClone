@@ -24,9 +24,6 @@ mainContainer.append(column2);
 mainContainer.append(column3);
 column2.append(row1);
 column2.append(row2);
-column3.append(happeningContainer);
-column3.append(whoToFollowContainer);
-
 // Pop-up Text
 
 export {

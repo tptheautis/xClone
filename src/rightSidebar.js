@@ -5,16 +5,22 @@ const searchInputContainer = document.createElement('div');
 searchInputContainer.classList.add('searchInputContainer');
 
 function createRightSidebar() {
+  const searchIcon = document.createElement('img');
+  searchIcon.classList.add('searchIcon');
+  searchIcon.src = '../src/assets/searchIcon.png';
+
   const searchBarContainer = document.createElement('div');
   searchBarContainer.classList.add('searchBarContainer');
   const whatsHappening = document.createElement('h2');
   const whatsHappeningText = document.createTextNode('What\'s Happening');
   column3.append(searchBarContainer);
   column3.append(searchInputContainer);
+  searchBarContainer.append(searchIcon);
   searchBarContainer.append(searchInputBox);
-  
   happeningContainer.append(whatsHappeningText);
   column3.append(whatsHappening);
+  column3.append(happeningContainer);
+  column3.append(whoToFollowContainer);
 
   // Right Sidebar
   const whoToFollowTextContainer = document.createElement('div');
@@ -23,10 +29,15 @@ function createRightSidebar() {
   whoToFollowContainer.append(whoToFollowTextContainer);
   whoToFollowTextContainer.append(whoToFollowText);
 
-  // SearchBar
-  const searchIcon = document.createElement('img');
-  searchIcon.classList.add('searchIcon');
-  searchIcon.src = '../src/assets/searchIcon.png';
+  searchInputBox.addEventListener('focus', () => {
+    searchBarContainer.style.border = '1px solid #1DA1F2';
+    searchIcon.style.filter = 'invert(48%) sepia(98%) saturate(1714%) hue-rotate(176deg) brightness(98%) contrast(93%)';
+  });
+
+  searchInputBox.addEventListener('focusout', () => {
+    searchBarContainer.style.border = 'none';
+    searchIcon.style = 'none';
+  });
 
   const availableProfileKeywords = [
     'Odin',

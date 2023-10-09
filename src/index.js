@@ -8,7 +8,6 @@ const column2 = document.createElement('div');
 const column3 = document.createElement('div');
 const row1 = document.createElement('div');
 const row2 = document.createElement('div');
-const searchBar = document.createElement('div');
 const happeningContainer = document.createElement('div');
 const whoToFollowContainer = document.createElement('div');
 mainContainer.classList.add('mainContainer');
@@ -17,7 +16,6 @@ column2.classList.add('column2');
 column3.classList.add('column3');
 row1.classList.add('row1');
 row2.classList.add('row2');
-searchBar.classList.add('searchBar');
 happeningContainer.classList.add('happeningContainer');
 whoToFollowContainer.classList.add('whoToFollowContainer');
 content.append(mainContainer);
@@ -26,7 +24,6 @@ mainContainer.append(column2);
 mainContainer.append(column3);
 column2.append(row1);
 column2.append(row2);
-column3.append(searchBar);
 column3.append(happeningContainer);
 column3.append(whoToFollowContainer);
 
@@ -37,7 +34,7 @@ export {
 };
 
 export {
-  searchBar, happeningContainer, whoToFollowContainer,
+  happeningContainer, whoToFollowContainer,
 };
 
 // Project Global Variables

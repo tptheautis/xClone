@@ -1,9 +1,6 @@
 import { row1 } from './index'
 
 function createMiddleContent() {
-  const searchTwitter = document.createElement('div');
-
-  const searchTwitterText = document.createTextNode('Search Twitter');
   const homeHeadingContainer = document.createElement('h1');
   const forYou = document.createElement('div');
   const following = document.createElement('div');
@@ -28,7 +25,6 @@ function createMiddleContent() {
   followingTextContainer.classList.add('followingTextContainer');
   const row1OptionsContainer = document.createElement('div');
   row1OptionsContainer.classList.add('row1OptionsContainer');
-  searchTwitter.append(searchTwitterText);
   row1.append(homeHeadingContainer, row1OptionsContainer);
   homeHeadingContainer.append(homeHeadingText);
   row1OptionsContainer.append(forYouContainer, followingContainer);
@@ -57,6 +53,5 @@ function createMiddleContent() {
     });
   });
 }
-
 
 export default createMiddleContent;

@@ -13,6 +13,7 @@ const twitterBlue = document.createElement('div');
 const profile = document.createElement('div');
 const more = document.createElement('div');
 const tweet = document.createElement('div');
+const postImageInput = document.getElementById('postImageInput');
 
 // Left Sidebar Containers
 const homeContainer = document.createElement('div')
@@ -158,6 +159,7 @@ tweetPopUpContainerContent.append(myTweetText);
 tweetPopUpContainerSidebar.append(tweetX);
 tweetPopUpContainerFooter.append(mediaIconContainer);
 mediaIconContainer.append(mediaIcon);
+mediaIconContainer.append(postImageInput);
 
 tweetPopUpContainerFooter.append(tweetPopUpContainerTweetButton);
 tweetPopUpContainerTweetButton.append(tweetPopUpContainerTweetButtonText);
@@ -176,6 +178,9 @@ myTweetContainer.append(myTweetContainerHeader);
 myTweetContainer.append(myTweetContainerFooter);
 myTweetContainer.append(myTweetContainerContent);
 myTweetContainer.append(myTweetContainerSidebar);
+const myTweetContainerImageContainer = document.createElement('div');
+myTweetContainerImageContainer.classList.add('myTweetContainerImageContainer');
+tweetPopUpContainerContent.append(myTweetContainerImageContainer);
 
 // My Tweet Pop-Up
 tweet.addEventListener('click', () => {
@@ -192,6 +197,18 @@ tweetPopUpContainerTweetButton.addEventListener('click', () => {
   column2.append(myTweetContainer);
   myTweetContainerContent.append(myTweetText.value);
   console.log(myTweetText.value);
+
+  // Upload Post Picture function
+  let uploadedImage = '';
+
+  postImageInput.addEventListener('change', () => {
+    console.log('working');
+    const reader = new FileReader();
+    reader.addEventListener('load', () => {
+      uploadedImage = reader.result;
+      myTweetContainerImageContainer.append(`url(${uploadedImage})`);
+    });
+  });
 });
 
 export default createLeftSidebar;

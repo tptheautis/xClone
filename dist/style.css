@@ -385,6 +385,13 @@ html {
   .odinContainer:hover, .stackContainer:hover, .githubContainer:hover, .showMoreContainer:hover {
     background-color: #e1e8ed;
   }
+
+  .btcPriceContainer, .ethPriceContainer, .xrpPriceContainer {
+    display: flex;
+    width: fit-content;
+    height: 100px;
+    outline: red;
+  }
   
   /*Buttons*/
   

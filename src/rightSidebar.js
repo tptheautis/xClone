@@ -13,9 +13,11 @@ function createRightSidebar() {
   searchBarContainer.classList.add('searchBarContainer');
   const whatsHappening = document.createElement('h2');
   const whatsHappeningText = document.createTextNode('What\'s Happening');
+  const cryptoPriceContainer = document.createElement('div');
   const btcPriceContainer = document.createElement('div');
   const ethPriceContainer = document.createElement('div');
   const xrpPriceContainer = document.createElement('div');
+  cryptoPriceContainer.classList.add('cryptoPriceContainer');
   btcPriceContainer.classList.add('btcPriceContainer');
   ethPriceContainer.classList.add('ethPriceContainer');
   xrpPriceContainer.classList.add('xrpPriceContainer');
@@ -30,7 +32,8 @@ function createRightSidebar() {
   column3.append(whatsHappening);
   column3.append(happeningContainer);
   column3.append(whoToFollowContainer);
-  happeningContainer.append(btcPriceContainer, ethPriceContainer, xrpPriceContainer);
+  happeningContainer.append(cryptoPriceContainer);
+  cryptoPriceContainer.append(btcPriceContainer, ethPriceContainer, xrpPriceContainer);
   btcPriceContainer.append(btcPriceText);
   ethPriceContainer.append(ethPriceText);
   xrpPriceContainer.append(xrpPriceText);

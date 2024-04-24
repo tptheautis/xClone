@@ -320,6 +320,7 @@ html {
   
   .happeningContainer {
     display: flex;
+    flex-direction: column;
     font-size: 2rem;
     font-weight: 600;
     background-color: #F5F8FA;
@@ -386,11 +387,18 @@ html {
     background-color: #e1e8ed;
   }
 
+  .cryptoPriceContainer {
+    padding-top: 4rem;
+    border: 1px solid red;
+    width: 100%;
+    height: fit-content%;
+  }
+
   .btcPriceContainer, .ethPriceContainer, .xrpPriceContainer {
     display: flex;
     width: fit-content;
     height: 100px;
-    outline: red;
+    outline: 1px solid red;
   }
   
   /*Buttons*/

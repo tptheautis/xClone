@@ -1,4 +1,5 @@
 import { happeningContainer, column3, whoToFollowContainer } from './index';
+import { bitcoin, ethereum, xrp } from './cryptoApi';
 
 const searchInputBox = document.getElementById('searchInputBox');
 const searchInputContainer = document.createElement('div');

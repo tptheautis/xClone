@@ -1,10 +1,8 @@
-import fetch from 'node-fetch';
-
 import dotenv from 'dotenv';
 
 dotenv.config();
 
-fetch('https://rest.coinapi.io/v1/exchangerate/BTC/USD', {
+const bitcoin = fetch('https://rest.coinapi.io/v1/exchangerate/BTC/USD', {
   headers: {
     'X-CoinAPI-Key': process.env.cryptoPriceApiKey,
   },
@@ -13,7 +11,7 @@ fetch('https://rest.coinapi.io/v1/exchangerate/BTC/USD', {
   .then((data) => console.log(data))
   .catch((error) => console.error('Error:', error));
 
-fetch('https://rest.coinapi.io/v1/exchangerate/ETH/USD', {
+const ethereum = fetch('https://rest.coinapi.io/v1/exchangerate/ETH/USD', {
   headers: {
     'X-CoinAPI-Key': process.env.cryptoPriceApiKey,
   },
@@ -22,7 +20,7 @@ fetch('https://rest.coinapi.io/v1/exchangerate/ETH/USD', {
   .then((data) => console.log(data))
   .catch((error) => console.error('Error:', error));
 
-fetch('https://rest.coinapi.io/v1/exchangerate/XRP/USD', {
+const xrp = fetch('https://rest.coinapi.io/v1/exchangerate/XRP/USD', {
   headers: {
     'X-CoinAPI-Key': process.env.cryptoPriceApiKey,
   },
@@ -30,3 +28,5 @@ fetch('https://rest.coinapi.io/v1/exchangerate/XRP/USD', {
   .then((response) => response.json())
   .then((data) => console.log(data))
   .catch((error) => console.error('Error:', error));
+
+export { bitcoin, ethereum, xrp };

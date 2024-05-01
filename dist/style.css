@@ -391,7 +391,7 @@ html {
     padding-top: 4rem;
     border: 1px solid red;
     width: 100%;
-    height: fit-content%;
+    height: fit-content;
   }
 
   .btcPriceContainer, .ethPriceContainer, .xrpPriceContainer {

@@ -1,5 +1,6 @@
 const path = require('path');
 const NodePolyfillPlugin = require('node-polyfill-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
   watch: true,
@@ -11,5 +12,6 @@ module.exports = {
   },
   plugins: [
     new NodePolyfillPlugin(),
+    new Dotenv(),
   ],
 };

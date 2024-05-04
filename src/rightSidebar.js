@@ -1,5 +1,5 @@
 import { happeningContainer, column3, whoToFollowContainer } from './index';
-import { bitcoin, ethereum, xrp } from './cryptoApi';
+import { bitcoinData, ethereum, xrp } from './cryptoApi';
 
 const searchInputBox = document.getElementById('searchInputBox');
 const searchInputContainer = document.createElement('div');
@@ -36,6 +36,7 @@ function createRightSidebar() {
   happeningContainer.append(cryptoPriceContainer);
   cryptoPriceContainer.append(btcPriceContainer, ethPriceContainer, xrpPriceContainer);
   btcPriceContainer.append(btcPriceText);
+  btcPriceContainer.append(bitcoinData);
   ethPriceContainer.append(ethPriceText);
   xrpPriceContainer.append(xrpPriceText);
 
